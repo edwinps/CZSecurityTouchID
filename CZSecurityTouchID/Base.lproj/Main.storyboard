@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ef6-Xu-KuR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="TDv-Ic-Ir4">
+            <objects>
+                <navigationController id="Ef6-Xu-KuR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zgZ-dv-qFN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="K3F-L8-lTv" kind="relationship" relationship="rootViewController" id="Ae0-KJ-WNm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYY-hM-JVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="157"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fvv-zd-uzB">
+            <objects>
+                <viewController id="K3F-L8-lTv" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ayS-MI-laj"/>
+                        <viewControllerLayoutGuide type="bottom" id="dGD-pK-Dgj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yzn-Xr-ZOG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C80-yF-nfz">
+                                <rect key="frame" x="157" y="289" width="62" height="30"/>
+                                <state key="normal" title="Enter Pin"/>
+                                <connections>
+                                    <action selector="showPinAction:" destination="K3F-L8-lTv" eventType="touchUpInside" id="wlD-7C-Zl6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e46-Wp-QtS">
+                                <rect key="frame" x="159" y="344" width="57" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="SettingPinAction:" destination="K3F-L8-lTv" eventType="touchUpInside" id="ngo-Y4-JoL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e46-Wp-QtS" firstAttribute="centerX" secondItem="yzn-Xr-ZOG" secondAttribute="centerX" id="BXk-6I-cmI"/>
+                            <constraint firstItem="C80-yF-nfz" firstAttribute="centerY" secondItem="yzn-Xr-ZOG" secondAttribute="centerY" constant="-30" id="Iys-JB-Xcs"/>
+                            <constraint firstItem="e46-Wp-QtS" firstAttribute="top" secondItem="C80-yF-nfz" secondAttribute="bottom" constant="25" id="cCw-nC-7A4"/>
+                            <constraint firstItem="C80-yF-nfz" firstAttribute="centerX" secondItem="yzn-Xr-ZOG" secondAttribute="centerX" id="xA3-Iy-SsL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cyc-Mk-xmb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Hr-CJ-53z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="157"/>
+        </scene>
+    </scenes>
+</document>
