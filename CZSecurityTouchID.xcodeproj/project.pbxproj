@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E835DF1B1E38F1650092F69D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF1A1E38F1650092F69D /* main.m */; };
+		E835DF1E1E38F1650092F69D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF1D1E38F1650092F69D /* AppDelegate.m */; };
+		E835DF241E38F1660092F69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E835DF221E38F1660092F69D /* Main.storyboard */; };
+		E835DF261E38F1660092F69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E835DF251E38F1660092F69D /* Assets.xcassets */; };
+		E835DF291E38F1660092F69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E835DF271E38F1660092F69D /* LaunchScreen.storyboard */; };
+		E835DF341E38F41D0092F69D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF331E38F41D0092F69D /* ViewController.m */; };
+		E835DF4E1E38F52E0092F69D /* CellDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF4D1E38F52E0092F69D /* CellDTO.m */; };
+		E835DF521E38F53B0092F69D /* sc_img_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E835DF4F1E38F53B0092F69D /* sc_img_delete.png */; };
+		E835DF531E38F53B0092F69D /* sc_img_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E835DF501E38F53B0092F69D /* sc_img_delete@2x.png */; };
+		E835DF541E38F53B0092F69D /* sc_img_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E835DF511E38F53B0092F69D /* sc_img_delete@3x.png */; };
+		E835DF591E38F5470092F69D /* PinStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF561E38F5470092F69D /* PinStyle.m */; };
+		E835DF5A1E38F5470092F69D /* SettingsStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF581E38F5470092F69D /* SettingsStyle.m */; };
+		E835DF621E38F5530092F69D /* PinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF5C1E38F5530092F69D /* PinButton.m */; };
+		E835DF631E38F5530092F69D /* PinView.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF5E1E38F5530092F69D /* PinView.m */; };
+		E835DF641E38F5530092F69D /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF601E38F5530092F69D /* SettingCell.m */; };
+		E835DF651E38F5530092F69D /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E835DF611E38F5530092F69D /* SettingCell.xib */; };
+		E835DF6D1E38F5D60092F69D /* PinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF681E38F5D60092F69D /* PinViewController.m */; };
+		E835DF6E1E38F5D60092F69D /* PinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E835DF691E38F5D60092F69D /* PinViewController.xib */; };
+		E835DF6F1E38F5D60092F69D /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF6B1E38F5D60092F69D /* SettingController.m */; };
+		E835DF701E38F5D60092F69D /* SettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E835DF6C1E38F5D60092F69D /* SettingController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E835DF161E38F1650092F69D /* CZSecurityTouchID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZSecurityTouchID.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E835DF1A1E38F1650092F69D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E835DF1C1E38F1650092F69D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E835DF1D1E38F1650092F69D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E835DF231E38F1660092F69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E835DF251E38F1660092F69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E835DF281E38F1660092F69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E835DF2A1E38F1660092F69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E835DF321E38F41D0092F69D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "CZSecurityTouchID-Example/ViewController.h"; sourceTree = "<group>"; };
+		E835DF331E38F41D0092F69D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "CZSecurityTouchID-Example/ViewController.m"; sourceTree = "<group>"; };
+		E835DF4C1E38F52E0092F69D /* CellDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellDTO.h; path = src/dto/CellDTO.h; sourceTree = "<group>"; };
+		E835DF4D1E38F52E0092F69D /* CellDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellDTO.m; path = src/dto/CellDTO.m; sourceTree = "<group>"; };
+		E835DF4F1E38F53B0092F69D /* sc_img_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sc_img_delete.png; path = src/img/sc_img_delete.png; sourceTree = "<group>"; };
+		E835DF501E38F53B0092F69D /* sc_img_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc_img_delete@2x.png"; path = "src/img/sc_img_delete@2x.png"; sourceTree = "<group>"; };
+		E835DF511E38F53B0092F69D /* sc_img_delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc_img_delete@3x.png"; path = "src/img/sc_img_delete@3x.png"; sourceTree = "<group>"; };
+		E835DF551E38F5470092F69D /* PinStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinStyle.h; path = src/style/PinStyle.h; sourceTree = "<group>"; };
+		E835DF561E38F5470092F69D /* PinStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinStyle.m; path = src/style/PinStyle.m; sourceTree = "<group>"; };
+		E835DF571E38F5470092F69D /* SettingsStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsStyle.h; path = src/style/SettingsStyle.h; sourceTree = "<group>"; };
+		E835DF581E38F5470092F69D /* SettingsStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsStyle.m; path = src/style/SettingsStyle.m; sourceTree = "<group>"; };
+		E835DF5B1E38F5530092F69D /* PinButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinButton.h; path = src/view/PinButton.h; sourceTree = "<group>"; };
+		E835DF5C1E38F5530092F69D /* PinButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinButton.m; path = src/view/PinButton.m; sourceTree = "<group>"; };
+		E835DF5D1E38F5530092F69D /* PinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinView.h; path = src/view/PinView.h; sourceTree = "<group>"; };
+		E835DF5E1E38F5530092F69D /* PinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinView.m; path = src/view/PinView.m; sourceTree = "<group>"; };
+		E835DF5F1E38F5530092F69D /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingCell.h; path = src/view/SettingCell.h; sourceTree = "<group>"; };
+		E835DF601E38F5530092F69D /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingCell.m; path = src/view/SettingCell.m; sourceTree = "<group>"; };
+		E835DF611E38F5530092F69D /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingCell.xib; path = src/view/SettingCell.xib; sourceTree = "<group>"; };
+		E835DF671E38F5D60092F69D /* PinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinViewController.h; path = src/controller/PinViewController.h; sourceTree = "<group>"; };
+		E835DF681E38F5D60092F69D /* PinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinViewController.m; path = src/controller/PinViewController.m; sourceTree = "<group>"; };
+		E835DF691E38F5D60092F69D /* PinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PinViewController.xib; path = src/controller/PinViewController.xib; sourceTree = "<group>"; };
+		E835DF6A1E38F5D60092F69D /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingController.h; path = src/controller/SettingController.h; sourceTree = "<group>"; };
+		E835DF6B1E38F5D60092F69D /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingController.m; path = src/controller/SettingController.m; sourceTree = "<group>"; };
+		E835DF6C1E38F5D60092F69D /* SettingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingController.xib; path = src/controller/SettingController.xib; sourceTree = "<group>"; };
+		E835DF711E38F5E30092F69D /* PinProtocole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PinProtocole.h; path = src/PinProtocole.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E835DF131E38F1650092F69D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E835DF0D1E38F1650092F69D = {
+			isa = PBXGroup;
+			children = (
+				E835DF311E38F3BC0092F69D /* src */,
+				E835DF301E38F38A0092F69D /* CZSecurityTouchID-Example */,
+				E835DF181E38F1650092F69D /* CZSecurityTouchID */,
+				E835DF171E38F1650092F69D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E835DF171E38F1650092F69D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E835DF161E38F1650092F69D /* CZSecurityTouchID.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E835DF181E38F1650092F69D /* CZSecurityTouchID */ = {
+			isa = PBXGroup;
+			children = (
+				E835DF1C1E38F1650092F69D /* AppDelegate.h */,
+				E835DF1D1E38F1650092F69D /* AppDelegate.m */,
+				E835DF221E38F1660092F69D /* Main.storyboard */,
+				E835DF251E38F1660092F69D /* Assets.xcassets */,
+				E835DF271E38F1660092F69D /* LaunchScreen.storyboard */,
+				E835DF2A1E38F1660092F69D /* Info.plist */,
+				E835DF191E38F1650092F69D /* Supporting Files */,
+			);
+			path = CZSecurityTouchID;
+			sourceTree = "<group>";
+		};
+		E835DF191E38F1650092F69D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E835DF1A1E38F1650092F69D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E835DF301E38F38A0092F69D /* CZSecurityTouchID-Example */ = {
+			isa = PBXGroup;
+			children = (
+				E835DF321E38F41D0092F69D /* ViewController.h */,
+				E835DF331E38F41D0092F69D /* ViewController.m */,
+			);
+			name = "CZSecurityTouchID-Example";
+			sourceTree = "<group>";
+		};
+		E835DF311E38F3BC0092F69D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E835DF711E38F5E30092F69D /* PinProtocole.h */,
+				E835DF481E38F4F20092F69D /* dto */,
+				E835DF4A1E38F5050092F69D /* style */,
+				E835DF491E38F4F90092F69D /* img */,
+				E835DF4B1E38F50B0092F69D /* view */,
+				E835DF661E38F5B30092F69D /* controller */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		E835DF481E38F4F20092F69D /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				E835DF4C1E38F52E0092F69D /* CellDTO.h */,
+				E835DF4D1E38F52E0092F69D /* CellDTO.m */,
+			);
+			name = dto;
+			sourceTree = "<group>";
+		};
+		E835DF491E38F4F90092F69D /* img */ = {
+			isa = PBXGroup;
+			children = (
+				E835DF4F1E38F53B0092F69D /* sc_img_delete.png */,
+				E835DF501E38F53B0092F69D /* sc_img_delete@2x.png */,
+				E835DF511E38F53B0092F69D /* sc_img_delete@3x.png */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
+		E835DF4A1E38F5050092F69D /* style */ = {
+			isa = PBXGroup;
+			children = (
+				E835DF551E38F5470092F69D /* PinStyle.h */,
+				E835DF561E38F5470092F69D /* PinStyle.m */,
+				E835DF571E38F5470092F69D /* SettingsStyle.h */,
+				E835DF581E38F5470092F69D /* SettingsStyle.m */,
+			);
+			name = style;
+			sourceTree = "<group>";
+		};
+		E835DF4B1E38F50B0092F69D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E835DF5B1E38F5530092F69D /* PinButton.h */,
+				E835DF5C1E38F5530092F69D /* PinButton.m */,
+				E835DF5D1E38F5530092F69D /* PinView.h */,
+				E835DF5E1E38F5530092F69D /* PinView.m */,
+				E835DF5F1E38F5530092F69D /* SettingCell.h */,
+				E835DF601E38F5530092F69D /* SettingCell.m */,
+				E835DF611E38F5530092F69D /* SettingCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		E835DF661E38F5B30092F69D /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E835DF671E38F5D60092F69D /* PinViewController.h */,
+				E835DF681E38F5D60092F69D /* PinViewController.m */,
+				E835DF691E38F5D60092F69D /* PinViewController.xib */,
+				E835DF6A1E38F5D60092F69D /* SettingController.h */,
+				E835DF6B1E38F5D60092F69D /* SettingController.m */,
+				E835DF6C1E38F5D60092F69D /* SettingController.xib */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E835DF151E38F1650092F69D /* CZSecurityTouchID */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E835DF2D1E38F1660092F69D /* Build configuration list for PBXNativeTarget "CZSecurityTouchID" */;
+			buildPhases = (
+				E835DF121E38F1650092F69D /* Sources */,
+				E835DF131E38F1650092F69D /* Frameworks */,
+				E835DF141E38F1650092F69D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CZSecurityTouchID;
+			productName = CZSecurityTouchID;
+			productReference = E835DF161E38F1650092F69D /* CZSecurityTouchID.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E835DF0E1E38F1650092F69D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Edwin Peña";
+				TargetAttributes = {
+					E835DF151E38F1650092F69D = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = E835DF111E38F1650092F69D /* Build configuration list for PBXProject "CZSecurityTouchID" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E835DF0D1E38F1650092F69D;
+			productRefGroup = E835DF171E38F1650092F69D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E835DF151E38F1650092F69D /* CZSecurityTouchID */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E835DF141E38F1650092F69D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E835DF521E38F53B0092F69D /* sc_img_delete.png in Resources */,
+				E835DF531E38F53B0092F69D /* sc_img_delete@2x.png in Resources */,
+				E835DF651E38F5530092F69D /* SettingCell.xib in Resources */,
+				E835DF291E38F1660092F69D /* LaunchScreen.storyboard in Resources */,
+				E835DF6E1E38F5D60092F69D /* PinViewController.xib in Resources */,
+				E835DF261E38F1660092F69D /* Assets.xcassets in Resources */,
+				E835DF541E38F53B0092F69D /* sc_img_delete@3x.png in Resources */,
+				E835DF701E38F5D60092F69D /* SettingController.xib in Resources */,
+				E835DF241E38F1660092F69D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E835DF121E38F1650092F69D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E835DF621E38F5530092F69D /* PinButton.m in Sources */,
+				E835DF5A1E38F5470092F69D /* SettingsStyle.m in Sources */,
+				E835DF6F1E38F5D60092F69D /* SettingController.m in Sources */,
+				E835DF641E38F5530092F69D /* SettingCell.m in Sources */,
+				E835DF341E38F41D0092F69D /* ViewController.m in Sources */,
+				E835DF1E1E38F1650092F69D /* AppDelegate.m in Sources */,
+				E835DF1B1E38F1650092F69D /* main.m in Sources */,
+				E835DF591E38F5470092F69D /* PinStyle.m in Sources */,
+				E835DF631E38F5530092F69D /* PinView.m in Sources */,
+				E835DF6D1E38F5D60092F69D /* PinViewController.m in Sources */,
+				E835DF4E1E38F52E0092F69D /* CellDTO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E835DF221E38F1660092F69D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E835DF231E38F1660092F69D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E835DF271E38F1660092F69D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E835DF281E38F1660092F69D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E835DF2B1E38F1660092F69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E835DF2C1E38F1660092F69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E835DF2E1E38F1660092F69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CZSecurityTouchID/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CZSecurityTouchID;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E835DF2F1E38F1660092F69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CZSecurityTouchID/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CZSecurityTouchID;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E835DF111E38F1650092F69D /* Build configuration list for PBXProject "CZSecurityTouchID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E835DF2B1E38F1660092F69D /* Debug */,
+				E835DF2C1E38F1660092F69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E835DF2D1E38F1660092F69D /* Build configuration list for PBXNativeTarget "CZSecurityTouchID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E835DF2E1E38F1660092F69D /* Debug */,
+				E835DF2F1E38F1660092F69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E835DF0E1E38F1650092F69D /* Project object */;
+}
