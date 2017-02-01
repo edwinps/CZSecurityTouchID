@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
     s.resources = ["res/img/*.{png}", "src/xibs/*.{xib}"]
     s.ios.deployment_target = '8.0'
     s.homepage     = "https://github.com/edwinps/CZSecurityTouchID"
-    s.license = { :type => 'MIT', :file => 'LICENSE.md'
+    s.license = { :type => 'MIT', :file => 'LICENSE.md' }
 end
