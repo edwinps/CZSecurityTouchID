@@ -30,7 +30,6 @@ typedef enum pinViewAction
 -(BOOL)touchIDActiveViewController;
 
 @optional
--(BOOL)hideTouchIDButtonIfFingersAreNotEnrolled;
 -(BOOL)showTouchIDVerificationImmediately;
 @end
 

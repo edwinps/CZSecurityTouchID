@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "PinProtocole.h"
-@class SettingsStyle;
+@class SettingsAppearance;
+@class PinAppearance;
 
 @interface SettingController : UITableViewController
 
-@property (nonatomic,strong) SettingsStyle *style;
+@property (nonatomic,strong) SettingsAppearance *appearance;
+@property (strong,nonatomic) PinAppearance *pinViewAppearance;
 
-- (instancetype)initWithSettingsStyle:(SettingsStyle*)style;
+- (instancetype)initWithSettingsAppearance:(SettingsAppearance*)appearance;
 
 @property (nonatomic, weak) id<PinViewControllerDataSource,PinViewControllerCreateDelegate> delegate;
 

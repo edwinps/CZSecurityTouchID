@@ -8,7 +8,7 @@
 
 #import "SettingCell.h"
 #import "CellDTO.h"
-#import "SettingsStyle.h"
+#import "SettingsAppearance.h"
 
 @implementation SettingCell
 

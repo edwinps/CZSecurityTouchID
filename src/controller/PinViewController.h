@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PinProtocole.h"
 @class PinViewController;
-@class PinStyle;
+@class PinAppearance;
 
 typedef NS_ENUM(NSInteger, PinViewControllerScope) {
     PinViewControllerScopeValidate,
@@ -21,8 +21,8 @@ typedef NS_ENUM(NSInteger, PinViewControllerScope) {
 @interface PinViewController : UIViewController
 - (instancetype)initWithScope:(PinViewControllerScope)scope;
 
-+ (PinStyle *)stlye;
-+ (void)setNewStyle:(PinStyle *)newStlye;
++ (PinAppearance *)appearance;
++ (void)setNewAppearance:(PinAppearance *)newAppearance;
 
 @property (nonatomic, assign) PinViewControllerScope scope;
 @property (nonatomic, weak) id<PinViewControllerCreateDelegate> createDelegate;

@@ -7,29 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F89846E1E41FBE1000786C5 /* PinAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8984501E41FBE1000786C5 /* PinAppearance.m */; };
+		9F89846F1E41FBE1000786C5 /* SettingsAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8984521E41FBE1000786C5 /* SettingsAppearance.m */; };
+		9F8984701E41FBE1000786C5 /* PinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8984551E41FBE1000786C5 /* PinViewController.m */; };
+		9F8984711E41FBE1000786C5 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8984571E41FBE1000786C5 /* SettingController.m */; };
+		9F8984721E41FBE1000786C5 /* CellDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F89845A1E41FBE1000786C5 /* CellDTO.m */; };
+		9F8984731E41FBE1000786C5 /* FingerPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F89845C1E41FBE1000786C5 /* FingerPrint.m */; };
+		9F8984741E41FBE1000786C5 /* NSData+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F89845F1E41FBE1000786C5 /* NSData+AESCrypt.m */; };
+		9F8984751E41FBE1000786C5 /* NSString+AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8984611E41FBE1000786C5 /* NSString+AESCrypt.m */; };
+		9F8984761E41FBE1000786C5 /* PinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8984651E41FBE1000786C5 /* PinButton.m */; };
+		9F8984771E41FBE1000786C5 /* PinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8984671E41FBE1000786C5 /* PinView.m */; };
+		9F8984781E41FBE1000786C5 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8984691E41FBE1000786C5 /* SettingCell.m */; };
+		9F8984791E41FBE1000786C5 /* PinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F89846B1E41FBE1000786C5 /* PinViewController.xib */; };
+		9F89847A1E41FBE1000786C5 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F89846C1E41FBE1000786C5 /* SettingCell.xib */; };
+		9F89847B1E41FBE1000786C5 /* SettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F89846D1E41FBE1000786C5 /* SettingController.xib */; };
+		9F8984821E41FBF5000786C5 /* sc_img_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F89847E1E41FBF5000786C5 /* sc_img_delete.png */; };
+		9F8984831E41FBF5000786C5 /* sc_img_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F89847F1E41FBF5000786C5 /* sc_img_delete@2x.png */; };
+		9F8984841E41FBF5000786C5 /* sc_img_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8984801E41FBF5000786C5 /* sc_img_delete@3x.png */; };
+		9F8984851E41FBF5000786C5 /* sc_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8984811E41FBF5000786C5 /* sc_logo.png */; };
 		E835DF1B1E38F1650092F69D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF1A1E38F1650092F69D /* main.m */; };
 		E835DF1E1E38F1650092F69D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF1D1E38F1650092F69D /* AppDelegate.m */; };
 		E835DF241E38F1660092F69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E835DF221E38F1660092F69D /* Main.storyboard */; };
 		E835DF261E38F1660092F69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E835DF251E38F1660092F69D /* Assets.xcassets */; };
 		E835DF291E38F1660092F69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E835DF271E38F1660092F69D /* LaunchScreen.storyboard */; };
 		E835DF341E38F41D0092F69D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF331E38F41D0092F69D /* ViewController.m */; };
-		E835DF4E1E38F52E0092F69D /* CellDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF4D1E38F52E0092F69D /* CellDTO.m */; };
-		E835DF521E38F53B0092F69D /* sc_img_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = E835DF4F1E38F53B0092F69D /* sc_img_delete.png */; };
-		E835DF531E38F53B0092F69D /* sc_img_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E835DF501E38F53B0092F69D /* sc_img_delete@2x.png */; };
-		E835DF541E38F53B0092F69D /* sc_img_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E835DF511E38F53B0092F69D /* sc_img_delete@3x.png */; };
-		E835DF591E38F5470092F69D /* PinStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF561E38F5470092F69D /* PinStyle.m */; };
-		E835DF5A1E38F5470092F69D /* SettingsStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF581E38F5470092F69D /* SettingsStyle.m */; };
-		E835DF621E38F5530092F69D /* PinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF5C1E38F5530092F69D /* PinButton.m */; };
-		E835DF631E38F5530092F69D /* PinView.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF5E1E38F5530092F69D /* PinView.m */; };
-		E835DF641E38F5530092F69D /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF601E38F5530092F69D /* SettingCell.m */; };
-		E835DF651E38F5530092F69D /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E835DF611E38F5530092F69D /* SettingCell.xib */; };
-		E835DF6D1E38F5D60092F69D /* PinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF681E38F5D60092F69D /* PinViewController.m */; };
-		E835DF6E1E38F5D60092F69D /* PinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E835DF691E38F5D60092F69D /* PinViewController.xib */; };
-		E835DF6F1E38F5D60092F69D /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = E835DF6B1E38F5D60092F69D /* SettingController.m */; };
-		E835DF701E38F5D60092F69D /* SettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E835DF6C1E38F5D60092F69D /* SettingController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F89844F1E41FBE1000786C5 /* PinAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinAppearance.h; sourceTree = "<group>"; };
+		9F8984501E41FBE1000786C5 /* PinAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinAppearance.m; sourceTree = "<group>"; };
+		9F8984511E41FBE1000786C5 /* SettingsAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsAppearance.h; sourceTree = "<group>"; };
+		9F8984521E41FBE1000786C5 /* SettingsAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsAppearance.m; sourceTree = "<group>"; };
+		9F8984541E41FBE1000786C5 /* PinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinViewController.h; sourceTree = "<group>"; };
+		9F8984551E41FBE1000786C5 /* PinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinViewController.m; sourceTree = "<group>"; };
+		9F8984561E41FBE1000786C5 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
+		9F8984571E41FBE1000786C5 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
+		9F8984591E41FBE1000786C5 /* CellDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellDTO.h; sourceTree = "<group>"; };
+		9F89845A1E41FBE1000786C5 /* CellDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellDTO.m; sourceTree = "<group>"; };
+		9F89845B1E41FBE1000786C5 /* FingerPrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FingerPrint.h; path = src/FingerPrint.h; sourceTree = "<group>"; };
+		9F89845C1E41FBE1000786C5 /* FingerPrint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FingerPrint.m; path = src/FingerPrint.m; sourceTree = "<group>"; };
+		9F89845E1E41FBE1000786C5 /* NSData+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AESCrypt.h"; sourceTree = "<group>"; };
+		9F89845F1E41FBE1000786C5 /* NSData+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AESCrypt.m"; sourceTree = "<group>"; };
+		9F8984601E41FBE1000786C5 /* NSString+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AESCrypt.h"; sourceTree = "<group>"; };
+		9F8984611E41FBE1000786C5 /* NSString+AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AESCrypt.m"; sourceTree = "<group>"; };
+		9F8984621E41FBE1000786C5 /* PinProtocole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinProtocole.h; path = src/PinProtocole.h; sourceTree = "<group>"; };
+		9F8984641E41FBE1000786C5 /* PinButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinButton.h; sourceTree = "<group>"; };
+		9F8984651E41FBE1000786C5 /* PinButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinButton.m; sourceTree = "<group>"; };
+		9F8984661E41FBE1000786C5 /* PinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinView.h; sourceTree = "<group>"; };
+		9F8984671E41FBE1000786C5 /* PinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinView.m; sourceTree = "<group>"; };
+		9F8984681E41FBE1000786C5 /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
+		9F8984691E41FBE1000786C5 /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
+		9F89846B1E41FBE1000786C5 /* PinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PinViewController.xib; sourceTree = "<group>"; };
+		9F89846C1E41FBE1000786C5 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		9F89846D1E41FBE1000786C5 /* SettingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingController.xib; sourceTree = "<group>"; };
+		9F89847E1E41FBF5000786C5 /* sc_img_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sc_img_delete.png; sourceTree = "<group>"; };
+		9F89847F1E41FBF5000786C5 /* sc_img_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sc_img_delete@2x.png"; sourceTree = "<group>"; };
+		9F8984801E41FBF5000786C5 /* sc_img_delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sc_img_delete@3x.png"; sourceTree = "<group>"; };
+		9F8984811E41FBF5000786C5 /* sc_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sc_logo.png; sourceTree = "<group>"; };
 		E835DF161E38F1650092F69D /* CZSecurityTouchID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CZSecurityTouchID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E835DF1A1E38F1650092F69D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E835DF1C1E38F1650092F69D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,29 +74,6 @@
 		E835DF2A1E38F1660092F69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E835DF321E38F41D0092F69D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "CZSecurityTouchID-Example/ViewController.h"; sourceTree = "<group>"; };
 		E835DF331E38F41D0092F69D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "CZSecurityTouchID-Example/ViewController.m"; sourceTree = "<group>"; };
-		E835DF4C1E38F52E0092F69D /* CellDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellDTO.h; path = src/dto/CellDTO.h; sourceTree = "<group>"; };
-		E835DF4D1E38F52E0092F69D /* CellDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellDTO.m; path = src/dto/CellDTO.m; sourceTree = "<group>"; };
-		E835DF4F1E38F53B0092F69D /* sc_img_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sc_img_delete.png; path = src/img/sc_img_delete.png; sourceTree = "<group>"; };
-		E835DF501E38F53B0092F69D /* sc_img_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc_img_delete@2x.png"; path = "src/img/sc_img_delete@2x.png"; sourceTree = "<group>"; };
-		E835DF511E38F53B0092F69D /* sc_img_delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc_img_delete@3x.png"; path = "src/img/sc_img_delete@3x.png"; sourceTree = "<group>"; };
-		E835DF551E38F5470092F69D /* PinStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinStyle.h; path = src/style/PinStyle.h; sourceTree = "<group>"; };
-		E835DF561E38F5470092F69D /* PinStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinStyle.m; path = src/style/PinStyle.m; sourceTree = "<group>"; };
-		E835DF571E38F5470092F69D /* SettingsStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsStyle.h; path = src/style/SettingsStyle.h; sourceTree = "<group>"; };
-		E835DF581E38F5470092F69D /* SettingsStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsStyle.m; path = src/style/SettingsStyle.m; sourceTree = "<group>"; };
-		E835DF5B1E38F5530092F69D /* PinButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinButton.h; path = src/view/PinButton.h; sourceTree = "<group>"; };
-		E835DF5C1E38F5530092F69D /* PinButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinButton.m; path = src/view/PinButton.m; sourceTree = "<group>"; };
-		E835DF5D1E38F5530092F69D /* PinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinView.h; path = src/view/PinView.h; sourceTree = "<group>"; };
-		E835DF5E1E38F5530092F69D /* PinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinView.m; path = src/view/PinView.m; sourceTree = "<group>"; };
-		E835DF5F1E38F5530092F69D /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingCell.h; path = src/view/SettingCell.h; sourceTree = "<group>"; };
-		E835DF601E38F5530092F69D /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingCell.m; path = src/view/SettingCell.m; sourceTree = "<group>"; };
-		E835DF611E38F5530092F69D /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingCell.xib; path = src/view/SettingCell.xib; sourceTree = "<group>"; };
-		E835DF671E38F5D60092F69D /* PinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinViewController.h; path = src/controller/PinViewController.h; sourceTree = "<group>"; };
-		E835DF681E38F5D60092F69D /* PinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinViewController.m; path = src/controller/PinViewController.m; sourceTree = "<group>"; };
-		E835DF691E38F5D60092F69D /* PinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PinViewController.xib; path = src/controller/PinViewController.xib; sourceTree = "<group>"; };
-		E835DF6A1E38F5D60092F69D /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingController.h; path = src/controller/SettingController.h; sourceTree = "<group>"; };
-		E835DF6B1E38F5D60092F69D /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingController.m; path = src/controller/SettingController.m; sourceTree = "<group>"; };
-		E835DF6C1E38F5D60092F69D /* SettingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingController.xib; path = src/controller/SettingController.xib; sourceTree = "<group>"; };
-		E835DF711E38F5E30092F69D /* PinProtocole.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PinProtocole.h; path = src/PinProtocole.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +87,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F89844E1E41FBE1000786C5 /* appearance */ = {
+			isa = PBXGroup;
+			children = (
+				9F89844F1E41FBE1000786C5 /* PinAppearance.h */,
+				9F8984501E41FBE1000786C5 /* PinAppearance.m */,
+				9F8984511E41FBE1000786C5 /* SettingsAppearance.h */,
+				9F8984521E41FBE1000786C5 /* SettingsAppearance.m */,
+			);
+			name = appearance;
+			path = src/appearance;
+			sourceTree = "<group>";
+		};
+		9F8984531E41FBE1000786C5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F8984541E41FBE1000786C5 /* PinViewController.h */,
+				9F8984551E41FBE1000786C5 /* PinViewController.m */,
+				9F8984561E41FBE1000786C5 /* SettingController.h */,
+				9F8984571E41FBE1000786C5 /* SettingController.m */,
+			);
+			name = controller;
+			path = src/controller;
+			sourceTree = "<group>";
+		};
+		9F8984581E41FBE1000786C5 /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				9F8984591E41FBE1000786C5 /* CellDTO.h */,
+				9F89845A1E41FBE1000786C5 /* CellDTO.m */,
+			);
+			name = dto;
+			path = src/dto;
+			sourceTree = "<group>";
+		};
+		9F89845D1E41FBE1000786C5 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				9F89845E1E41FBE1000786C5 /* NSData+AESCrypt.h */,
+				9F89845F1E41FBE1000786C5 /* NSData+AESCrypt.m */,
+				9F8984601E41FBE1000786C5 /* NSString+AESCrypt.h */,
+				9F8984611E41FBE1000786C5 /* NSString+AESCrypt.m */,
+			);
+			name = helper;
+			path = src/helper;
+			sourceTree = "<group>";
+		};
+		9F8984631E41FBE1000786C5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9F8984641E41FBE1000786C5 /* PinButton.h */,
+				9F8984651E41FBE1000786C5 /* PinButton.m */,
+				9F8984661E41FBE1000786C5 /* PinView.h */,
+				9F8984671E41FBE1000786C5 /* PinView.m */,
+				9F8984681E41FBE1000786C5 /* SettingCell.h */,
+				9F8984691E41FBE1000786C5 /* SettingCell.m */,
+			);
+			name = view;
+			path = src/view;
+			sourceTree = "<group>";
+		};
+		9F89846A1E41FBE1000786C5 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+				9F89846B1E41FBE1000786C5 /* PinViewController.xib */,
+				9F89846C1E41FBE1000786C5 /* SettingCell.xib */,
+				9F89846D1E41FBE1000786C5 /* SettingController.xib */,
+			);
+			name = xibs;
+			path = src/xibs;
+			sourceTree = "<group>";
+		};
+		9F89847C1E41FBF5000786C5 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				9F89847D1E41FBF5000786C5 /* img */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		9F89847D1E41FBF5000786C5 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				9F89847E1E41FBF5000786C5 /* sc_img_delete.png */,
+				9F89847F1E41FBF5000786C5 /* sc_img_delete@2x.png */,
+				9F8984801E41FBF5000786C5 /* sc_img_delete@3x.png */,
+				9F8984811E41FBF5000786C5 /* sc_logo.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		E835DF0D1E38F1650092F69D = {
 			isa = PBXGroup;
 			children = (
+				9F89847C1E41FBF5000786C5 /* res */,
 				E835DF311E38F3BC0092F69D /* src */,
 				E835DF301E38F38A0092F69D /* CZSecurityTouchID-Example */,
 				E835DF181E38F1650092F69D /* CZSecurityTouchID */,
@@ -128,71 +230,17 @@
 		E835DF311E38F3BC0092F69D /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E835DF711E38F5E30092F69D /* PinProtocole.h */,
-				E835DF481E38F4F20092F69D /* dto */,
-				E835DF4A1E38F5050092F69D /* style */,
-				E835DF491E38F4F90092F69D /* img */,
-				E835DF4B1E38F50B0092F69D /* view */,
-				E835DF661E38F5B30092F69D /* controller */,
+				9F89844E1E41FBE1000786C5 /* appearance */,
+				9F8984531E41FBE1000786C5 /* controller */,
+				9F8984581E41FBE1000786C5 /* dto */,
+				9F89845B1E41FBE1000786C5 /* FingerPrint.h */,
+				9F89845C1E41FBE1000786C5 /* FingerPrint.m */,
+				9F89845D1E41FBE1000786C5 /* helper */,
+				9F8984621E41FBE1000786C5 /* PinProtocole.h */,
+				9F8984631E41FBE1000786C5 /* view */,
+				9F89846A1E41FBE1000786C5 /* xibs */,
 			);
 			name = src;
-			sourceTree = "<group>";
-		};
-		E835DF481E38F4F20092F69D /* dto */ = {
-			isa = PBXGroup;
-			children = (
-				E835DF4C1E38F52E0092F69D /* CellDTO.h */,
-				E835DF4D1E38F52E0092F69D /* CellDTO.m */,
-			);
-			name = dto;
-			sourceTree = "<group>";
-		};
-		E835DF491E38F4F90092F69D /* img */ = {
-			isa = PBXGroup;
-			children = (
-				E835DF4F1E38F53B0092F69D /* sc_img_delete.png */,
-				E835DF501E38F53B0092F69D /* sc_img_delete@2x.png */,
-				E835DF511E38F53B0092F69D /* sc_img_delete@3x.png */,
-			);
-			name = img;
-			sourceTree = "<group>";
-		};
-		E835DF4A1E38F5050092F69D /* style */ = {
-			isa = PBXGroup;
-			children = (
-				E835DF551E38F5470092F69D /* PinStyle.h */,
-				E835DF561E38F5470092F69D /* PinStyle.m */,
-				E835DF571E38F5470092F69D /* SettingsStyle.h */,
-				E835DF581E38F5470092F69D /* SettingsStyle.m */,
-			);
-			name = style;
-			sourceTree = "<group>";
-		};
-		E835DF4B1E38F50B0092F69D /* view */ = {
-			isa = PBXGroup;
-			children = (
-				E835DF5B1E38F5530092F69D /* PinButton.h */,
-				E835DF5C1E38F5530092F69D /* PinButton.m */,
-				E835DF5D1E38F5530092F69D /* PinView.h */,
-				E835DF5E1E38F5530092F69D /* PinView.m */,
-				E835DF5F1E38F5530092F69D /* SettingCell.h */,
-				E835DF601E38F5530092F69D /* SettingCell.m */,
-				E835DF611E38F5530092F69D /* SettingCell.xib */,
-			);
-			name = view;
-			sourceTree = "<group>";
-		};
-		E835DF661E38F5B30092F69D /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				E835DF671E38F5D60092F69D /* PinViewController.h */,
-				E835DF681E38F5D60092F69D /* PinViewController.m */,
-				E835DF691E38F5D60092F69D /* PinViewController.xib */,
-				E835DF6A1E38F5D60092F69D /* SettingController.h */,
-				E835DF6B1E38F5D60092F69D /* SettingController.m */,
-				E835DF6C1E38F5D60092F69D /* SettingController.xib */,
-			);
-			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +274,7 @@
 				TargetAttributes = {
 					E835DF151E38F1650092F69D = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = C2UZU6ZLJE;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -253,14 +302,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E835DF521E38F53B0092F69D /* sc_img_delete.png in Resources */,
-				E835DF531E38F53B0092F69D /* sc_img_delete@2x.png in Resources */,
-				E835DF651E38F5530092F69D /* SettingCell.xib in Resources */,
+				9F8984851E41FBF5000786C5 /* sc_logo.png in Resources */,
 				E835DF291E38F1660092F69D /* LaunchScreen.storyboard in Resources */,
-				E835DF6E1E38F5D60092F69D /* PinViewController.xib in Resources */,
+				9F8984791E41FBE1000786C5 /* PinViewController.xib in Resources */,
 				E835DF261E38F1660092F69D /* Assets.xcassets in Resources */,
-				E835DF541E38F53B0092F69D /* sc_img_delete@3x.png in Resources */,
-				E835DF701E38F5D60092F69D /* SettingController.xib in Resources */,
+				9F8984821E41FBF5000786C5 /* sc_img_delete.png in Resources */,
+				9F8984841E41FBF5000786C5 /* sc_img_delete@3x.png in Resources */,
+				9F89847A1E41FBE1000786C5 /* SettingCell.xib in Resources */,
+				9F8984831E41FBF5000786C5 /* sc_img_delete@2x.png in Resources */,
+				9F89847B1E41FBE1000786C5 /* SettingController.xib in Resources */,
 				E835DF241E38F1660092F69D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,17 +322,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E835DF621E38F5530092F69D /* PinButton.m in Sources */,
-				E835DF5A1E38F5470092F69D /* SettingsStyle.m in Sources */,
-				E835DF6F1E38F5D60092F69D /* SettingController.m in Sources */,
-				E835DF641E38F5530092F69D /* SettingCell.m in Sources */,
 				E835DF341E38F41D0092F69D /* ViewController.m in Sources */,
+				9F89846E1E41FBE1000786C5 /* PinAppearance.m in Sources */,
+				9F8984731E41FBE1000786C5 /* FingerPrint.m in Sources */,
+				9F8984701E41FBE1000786C5 /* PinViewController.m in Sources */,
+				9F8984721E41FBE1000786C5 /* CellDTO.m in Sources */,
+				9F8984761E41FBE1000786C5 /* PinButton.m in Sources */,
+				9F8984741E41FBE1000786C5 /* NSData+AESCrypt.m in Sources */,
+				9F89846F1E41FBE1000786C5 /* SettingsAppearance.m in Sources */,
 				E835DF1E1E38F1650092F69D /* AppDelegate.m in Sources */,
+				9F8984771E41FBE1000786C5 /* PinView.m in Sources */,
+				9F8984781E41FBE1000786C5 /* SettingCell.m in Sources */,
 				E835DF1B1E38F1650092F69D /* main.m in Sources */,
-				E835DF591E38F5470092F69D /* PinStyle.m in Sources */,
-				E835DF631E38F5530092F69D /* PinView.m in Sources */,
-				E835DF6D1E38F5D60092F69D /* PinViewController.m in Sources */,
-				E835DF4E1E38F52E0092F69D /* CellDTO.m in Sources */,
+				9F8984711E41FBE1000786C5 /* SettingController.m in Sources */,
+				9F8984751E41FBE1000786C5 /* NSString+AESCrypt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,11 +455,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = C2UZU6ZLJE;
 				INFOPLIST_FILE = CZSecurityTouchID/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CZSecurityTouchID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "876e839f-71eb-4a49-a319-e345171add65";
+				PROVISIONING_PROFILE_SPECIFIER = "Generic Enterprise Development Wildcard";
 			};
 			name = Debug;
 		};
