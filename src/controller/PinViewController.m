@@ -10,20 +10,21 @@
 
 #import "PinButton.h"
 #import "PinView.h"
-#import "PinStyle.h"
+#import "PinAppearance.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import <LocalAuthentication/LocalAuthentication.h>
 
-static PinStyle *stlye;
+static PinAppearance *appearance;
 
 @interface PinViewController ()<CAAnimationDelegate>
 
-@property (nonatomic, strong) PinStyle *stlye;
+@property (nonatomic, strong) PinAppearance *appearance;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *supportLabel;
 @property (strong, nonatomic) IBOutletCollection(PinButton) NSArray *numberButtons;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UIView *viewForPins;
+@property (weak, nonatomic) IBOutlet UIImageView *imageLogo;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *viewForPinsLayoutConstraint;
 
 @property (nonatomic, strong) NSString *currentPin;
@@ -37,12 +38,12 @@ static PinStyle *stlye;
 
 #pragma mark - Public
 
-+ (PinStyle *)stlye {
-    return stlye;
++ (PinAppearance *)appearance {
+    return appearance;
 }
 
-+ (void)setNewStyle:(PinStyle *)newStlye {
-    stlye = newStlye;
++ (void)setNewAppearance:(PinAppearance *)newAppearance {
+    appearance = newAppearance;
 }
 
 #pragma mark - initialization
@@ -53,10 +54,10 @@ static PinStyle *stlye;
     self = [super initWithNibName:NSStringFromClass([PinViewController class]) bundle:budle];
     if (self) {
         _scope = scope;
-        if (!stlye) {
-            stlye = [PinStyle defaultStyle];
+        if (!appearance) {
+            appearance = [PinAppearance defaultAppearance];
         }
-        _stlye = stlye;
+        _appearance = appearance;
     }
     return self;
 }
@@ -76,10 +77,7 @@ static PinStyle *stlye;
 -(void)setupInitialState {
     self.enable = YES;
     self.touchIDPassedValidation = NO;
-    
-    if ([self.dataSourceDelegate respondsToSelector:@selector(hideTouchIDButtonIfFingersAreNotEnrolled)]) {
-        
-    }
+
     
     if ([self.dataSourceDelegate respondsToSelector:@selector(showTouchIDVerificationImmediately)]) {
         BOOL immediately = [self.dataSourceDelegate showTouchIDVerificationImmediately];
@@ -91,63 +89,62 @@ static PinStyle *stlye;
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    if(_scope == PinViewControllerScopeValidate){
-        [self touchIDVerification];
-    }
 }
 
 -(void)setScope:(PinViewControllerScope)scope{
     _scope = scope;
     [self viewDidLoad];
     if(scope == PinViewControllerScopeCreate){
-        self.titleLabel.text = _stlye.createNewPinTitleText;
+        self.titleLabel.text = _appearance.createNewPinTitleText;
     }else{
-        self.titleLabel.text = _stlye.titleText;
+        self.titleLabel.text = _appearance.titleText;
     }
 }
 
 -(void)configureView {
     for (PinButton *button in self.numberButtons) {
-        [button setTintColor:_stlye.numberButtonColor];
-        [button setTitleColor:_stlye.numberButtonTitleColor forState:UIControlStateNormal];
-        [button setTitleColor:_stlye.numberButtonTitleColor forState:UIControlStateSelected];
-        [button setTitleColor:_stlye.numberButtonTitleColor forState:UIControlStateHighlighted];
-        button.strokeColor = _stlye.numberButtonStrokeColor;
-        button.strokeWidth = _stlye.numberButtonStrokeWitdh;
-        button.strokeColor = _stlye.numberButtonstrokeEnabled ? [_stlye numberButtonStrokeColor] : [UIColor clearColor];
-        [button.titleLabel setFont:_stlye.numberButtonFont];
+        [button setTintColor:_appearance.numberButtonColor];
+        [button setTitleColor:_appearance.numberButtonTitleColor forState:UIControlStateNormal];
+        [button setTitleColor:_appearance.numberButtonTitleColor forState:UIControlStateSelected];
+        [button setTitleColor:_appearance.numberButtonTitleColor forState:UIControlStateHighlighted];
+        button.strokeColor = _appearance.numberButtonStrokeColor;
+        button.strokeWidth = _appearance.numberButtonStrokeWitdh;
+        button.strokeColor = _appearance.numberButtonstrokeEnabled ? [_appearance numberButtonStrokeColor] : [UIColor clearColor];
+        [button.titleLabel setFont:_appearance.numberButtonFont];
         [button setNeedsDisplay];
     }
     
     NSBundle *bundle = [NSBundle bundleForClass:[PinViewController class]];
     UIImage *deleteButtonImage = [UIImage imageNamed:@"sc_img_delete" inBundle:bundle compatibleWithTraitCollection:nil];
     [self.deleteButton setImage:deleteButtonImage forState:UIControlStateNormal];
-    [self.deleteButton setTintColor:_stlye.deleteButtonColor];
-    self.titleLabel.text = _stlye.titleText;
-    self.titleLabel.font = _stlye.titleTextFont;
-    self.titleLabel.textColor = _stlye.titleTextColor;
-    self.supportLabel.text = _stlye.supportText;
-    self.supportLabel.font = _stlye.supportTextFont;
-    self.supportLabel.textColor = _stlye.supportTextColor;
+    [self.deleteButton setTintColor:_appearance.deleteButtonColor];
+    self.titleLabel.text = _appearance.titleText;
+    self.titleLabel.font = _appearance.titleTextFont;
+    self.titleLabel.textColor = _appearance.titleTextColor;
+    self.supportLabel.text = _appearance.supportText;
+    self.supportLabel.font = _appearance.supportTextFont;
+    self.supportLabel.textColor = _appearance.supportTextColor;
     [self.supportLabel setHidden:YES];
+    [self.imageLogo setImage:_appearance.logo];
+    self.view.backgroundColor = _appearance.backgroundColor;
 }
 
 -(void)changeColorView {
  
     for (PinButton *button in self.numberButtons) {
-        button.strokeColor = _errorPin ? _stlye.strokeErrorColor :_stlye.numberButtonStrokeColor;
+        button.strokeColor = _errorPin ? _appearance.strokeErrorColor :_appearance.numberButtonStrokeColor;
         [button setNeedsDisplay];
     }
     for(PinView *view in self.viewForPins.subviews){
-        view.strokeColor = _errorPin ?_stlye.strokeErrorColor : _stlye.pinStrokeColor;
-        view.fillColor = _errorPin ?_stlye.strokeErrorColor : _stlye.pinStrokeColor;
-        view.highlightedColor = _errorPin ?_stlye.strokeErrorColor : _stlye.pinHighlightedColor;
+        view.strokeColor = _errorPin ?_appearance.strokeErrorColor : _appearance.pinStrokeColor;
+        view.fillColor = _errorPin ?_appearance.strokeErrorColor : _appearance.pinStrokeColor;
+        view.highlightedColor = _errorPin ?_appearance.strokeErrorColor : _appearance.pinHighlightedColor;
         [view setNeedsDisplay];
     }
     [self createPinView2];
-    [self.deleteButton setTintColor: _errorPin ?_stlye.strokeErrorColor : _stlye.deleteButtonColor];
-    self.titleLabel.textColor = _errorPin ? _stlye.strokeErrorColor : _stlye.titleTextColor;
-    self.supportLabel.textColor = _errorPin ? _stlye.strokeErrorColor : _stlye.supportTextColor;
+    [self.deleteButton setTintColor: _errorPin ?_appearance.strokeErrorColor : _appearance.deleteButtonColor];
+    self.titleLabel.textColor = _errorPin ? _appearance.strokeErrorColor : _appearance.titleTextColor;
+    self.supportLabel.textColor = _errorPin ? _appearance.strokeErrorColor : _appearance.supportTextColor;
 }
 
 -(void)createPinView2 {
@@ -177,7 +174,7 @@ static PinStyle *stlye;
             break;
     }
     
-    CGFloat width = _stlye.pinSize.width;
+    CGFloat width = _appearance.pinSize.width;
     CGFloat distance = 15.0f;
     
     CGFloat pinWidth = (length * width) + ((length - 1) * distance);
@@ -189,12 +186,12 @@ static PinStyle *stlye;
     }
     
     for (NSInteger index = 0; index<length; index++) {
-        PinView *view = [[PinView alloc]initWithFrame:CGRectMake(x, 0, _stlye.pinSize.width, _stlye.pinSize.height)];
+        PinView *view = [[PinView alloc]initWithFrame:CGRectMake(x, 0, _appearance.pinSize.width, _appearance.pinSize.height)];
         
-        view.fillColor = _stlye.pinFillColor;
-        view.highlightedColor = _stlye.strokeErrorColor;
-        view.strokeColor = _stlye.strokeErrorColor;
-        view.strokeWidth = _stlye.pinStrokeWidth;
+        view.fillColor = _appearance.pinFillColor;
+        view.highlightedColor = _appearance.strokeErrorColor;
+        view.strokeColor = _appearance.strokeErrorColor;
+        view.strokeWidth = _appearance.pinStrokeWidth;
         
         if (self.touchIDPassedValidation) {
             view.highlighted = YES;
@@ -265,7 +262,7 @@ static PinStyle *stlye;
 
 -(void)reEnterPin{
     [self viewDidLoad];
-    self.titleLabel.text = _stlye.reEnterPinTitleText;
+    self.titleLabel.text = _appearance.reEnterPinTitleText;
 }
 
 -(void)noMathPin{
@@ -277,7 +274,7 @@ static PinStyle *stlye;
     _scope = PinViewControllerScopeCreate;
     _comfirmationPin = nil;
     [self viewDidLoad];
-    self.titleLabel.text = _stlye.changeTitleText;
+    self.titleLabel.text = _appearance.changeTitleText;
 }
 
 -(void)createPinView {
@@ -307,7 +304,7 @@ static PinStyle *stlye;
             break;
     }
     
-    CGFloat width = _stlye.pinSize.width;
+    CGFloat width = _appearance.pinSize.width;
     CGFloat distance = 15.0f;
     
     CGFloat pinWidth = (length * width) + ((length - 1) * distance);
@@ -319,12 +316,12 @@ static PinStyle *stlye;
     }
     
     for (NSInteger index = 0; index<length; index++) {
-        PinView *view = [[PinView alloc]initWithFrame:CGRectMake(x, 0, _stlye.pinSize.width, _stlye.pinSize.height)];
+        PinView *view = [[PinView alloc]initWithFrame:CGRectMake(x, 0, _appearance.pinSize.width, _appearance.pinSize.height)];
         
-        view.fillColor = _errorPin ?_stlye.strokeErrorColor : _stlye.pinFillColor;
-        view.highlightedColor = _stlye.pinHighlightedColor;
-        view.strokeColor = _errorPin ?_stlye.strokeErrorColor : _stlye.pinStrokeColor;
-        view.strokeWidth = _stlye.pinStrokeWidth;
+        view.fillColor = _errorPin ?_appearance.strokeErrorColor : _appearance.pinFillColor;
+        view.highlightedColor = _appearance.pinHighlightedColor;
+        view.strokeColor = _errorPin ?_appearance.strokeErrorColor : _appearance.pinStrokeColor;
+        view.strokeWidth = _appearance.pinStrokeWidth;
         
         if (self.touchIDPassedValidation) {
             view.highlighted = YES;
@@ -516,7 +513,7 @@ static PinStyle *stlye;
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         __weak PinViewController *weakSelf = self;
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-                localizedReason:_stlye.touchIDVerification
+                localizedReason:_appearance.touchIDVerification
                           reply:^(BOOL success, NSError * authenticationError) {
                               if (success) {
                                   __strong PinViewController *strongSelf = weakSelf;

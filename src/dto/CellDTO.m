@@ -7,7 +7,7 @@
 //
 
 #import "CellDTO.h"
-#import "SettingsStyle.h"
+#import "SettingsAppearance.h"
 
 @implementation CellDTO
 
@@ -21,7 +21,7 @@
     return self;
 }
 
-- (instancetype)initWithId:(pinViewAction)identifier wihtStyle:(SettingsStyle*)style withDelegate:(id<CellDTODelegate>)delegate {
+- (instancetype)initWithId:(pinViewAction)identifier wihtStyle:(SettingsAppearance*)style withDelegate:(id<CellDTODelegate>)delegate {
     self = [super init];
     if (self) {
         _cellDTOIdentifier = identifier;

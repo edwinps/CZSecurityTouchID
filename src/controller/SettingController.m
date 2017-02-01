@@ -10,8 +10,8 @@
 #import "SettingCell.h"
 #import "CellDTO.h"
 #import "PinViewController.h"
-#import "PinStyle.h"
-#import "SettingsStyle.h"
+#import "PinAppearance.h"
+#import "SettingsAppearance.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 
 @interface SettingController ()<CellDTODelegate,PinViewControllerValidateDelegate,PinViewControllerCreateDelegate>
@@ -22,7 +22,6 @@
 @property (strong,nonatomic) NSString *changePinText;
 @property (strong,nonatomic) NSString *touchIDPinText;
 @property (strong,nonatomic) NSArray *dataSource;
-@property (strong,nonatomic) PinStyle *pinViewStyle;
 @property (nonatomic,strong,readonly) PinViewController * vcPinView;
 @end
 
@@ -33,15 +32,16 @@ NSString * const kCellIdentifier = @"SettingCell";
 
 #pragma mark - initialization
 
-- (instancetype)initWithSettingsStyle:(SettingsStyle*)style{
+- (instancetype)initWithSettingsAppearance:(SettingsAppearance*)appearance{
     NSBundle *budle = [NSBundle bundleForClass:[SettingController class]];
     NSLog(@"%@", budle);
     self = [super initWithNibName:NSStringFromClass([SettingController class]) bundle:budle];
     if (self) {
-        if (!style) {
-            style = [SettingsStyle defaultStyle];
+        if (!appearance) {
+            appearance = [SettingsAppearance defaultAppearance];
+            self.pinViewAppearance = [PinAppearance defaultAppearance];
         }
-        self.style = style;
+        self.appearance = appearance;
     }
     return self;
 }
@@ -51,15 +51,23 @@ NSString * const kCellIdentifier = @"SettingCell";
     if (!vcPinView) {
         vcPinView = [[PinViewController alloc] initWithScope:PinViewControllerScopeCreate];
     }
+    
     vcPinView.dataSourceDelegate = _delegate;
     vcPinView.validateDelegate = self;
     vcPinView.createDelegate = self;
     return vcPinView;
 }
 
+-(void)setPinViewAppearance:(PinAppearance *)pinViewAppearance{
+    _pinViewAppearance = pinViewAppearance;
+    if(!pinViewAppearance){
+      _pinViewAppearance = [PinAppearance defaultAppearance];
+    }
+    [PinViewController setNewAppearance:_pinViewAppearance];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.pinViewStyle = [PinStyle defaultStyle];
     [self.tableView registerNib:[UINib nibWithNibName:kCellIdentifier bundle:nil] forCellReuseIdentifier:kCellIdentifier];
     [self configureView];
 }
@@ -75,19 +83,19 @@ NSString * const kCellIdentifier = @"SettingCell";
 
 -(void)configureView{
     _footerGroupText = @"";
-    _titleGroupText = _style.titleGroupText;
+    _titleGroupText = _appearance.titleGroupText;
     
     NSError   * error   = nil;
     LAContext * context = [[LAContext alloc] init];
     NSMutableArray *arrayButtons = [[NSMutableArray alloc] init];
     
-    CellDTO * changeCodeButton = [[CellDTO alloc] initWithId:changePin wihtStyle:_style withDelegate:nil];
-    CellDTO * tocheIDButton = [[CellDTO alloc] initWithId:touchIdPin wihtStyle:_style withDelegate:self];
+    CellDTO * changeCodeButton = [[CellDTO alloc] initWithId:changePin wihtStyle:_appearance withDelegate:nil];
+    CellDTO * tocheIDButton = [[CellDTO alloc] initWithId:touchIdPin wihtStyle:_appearance withDelegate:self];
     if ([self.delegate codeForPinViewController].length > 0){
-        CellDTO *deactiveButton = [[CellDTO alloc] initWithId:deactivatePin wihtStyle:_style withDelegate:nil];
+        CellDTO *deactiveButton = [[CellDTO alloc] initWithId:deactivatePin wihtStyle:_appearance withDelegate:nil];
         [arrayButtons addObject:deactiveButton];
     }else{
-        CellDTO * activeButton = [[CellDTO alloc] initWithId:activatePin wihtStyle:_style withDelegate:nil];
+        CellDTO * activeButton = [[CellDTO alloc] initWithId:activatePin wihtStyle:_appearance withDelegate:nil];
         [arrayButtons addObject:activeButton];
         changeCodeButton.enableCell = NO;
         tocheIDButton.enableCell = NO;
@@ -97,7 +105,7 @@ NSString * const kCellIdentifier = @"SettingCell";
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         [arrayButtons addObject:tocheIDButton];
         tocheIDButton.switchOn = [_delegate touchIDActiveViewController];
-        _footerGroupText = _style.footerGroupText;
+        _footerGroupText = _appearance.footerGroupText;
 
     }
     self.dataSource = [[NSArray alloc] initWithArray:arrayButtons];

@@ -1,20 +1,19 @@
 //
 //  ViewController.m
-//  CZSecurityTouchID
+//  T21FingerPrint
 //
-//  Created by Edwin Peña on 25/1/17.
+//  Created by Edwin Peña on 19/1/17.
 //  Copyright © 2017 Edwin Peña. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "PinViewController.h"
-#import "PinStyle.h"
-#import "SettingController.h"
+//#import "PinViewController.h"
+//#import "PinAppearance.h"
+//#import "SettingController.h"
+#import "FingerPrint.h"
 
-NSString * const kViewControllerPin = @"kViewControllerPin";
-NSString * const kTouchIDActive = @"kTouchIDActive";
 
-@interface ViewController () <PinViewControllerCreateDelegate, PinViewControllerDataSource, PinViewControllerValidateDelegate>
+@interface ViewController () <PinViewControllerValidateDelegate>
 
 @end
 
@@ -29,44 +28,7 @@ NSString * const kTouchIDActive = @"kTouchIDActive";
     [super didReceiveMemoryWarning];
 }
 
--(void)pinViewController:(UIViewController *)viewController didSetNewPin:(NSString *)pin {
-    NSLog(@"viewController: %@",viewController);
-    [[NSUserDefaults standardUserDefaults] setObject:pin forKey:kViewControllerPin];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
--(void)touchIDActive:(UIViewController *)viewController didActiveTouchID:(BOOL)active{
-    NSLog(@"viewController: %@",viewController);
-    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:active] forKey:kTouchIDActive];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
--(NSInteger)lengthForPin {
-    return 4;
-}
-
--(NSString *)codeForPinViewController {
-    NSString *pin = [[NSUserDefaults standardUserDefaults] objectForKey:kViewControllerPin];
-    return pin;
-}
-
--(BOOL )touchIDActiveViewController{
-    NSNumber *active = [[NSUserDefaults standardUserDefaults] objectForKey:kTouchIDActive];
-    if(active){
-        return active.boolValue;
-    }
-    
-    return NO;
-}
-
--(BOOL)hideTouchIDButtonIfFingersAreNotEnrolled {
-    return YES;
-}
-
--(BOOL)showTouchIDVerificationImmediately {
-    return NO;
-}
 
 -(void)pinViewControllerDidSetWrongPin:(pinViewAction)action{
     
@@ -78,23 +40,25 @@ NSString * const kTouchIDActive = @"kTouchIDActive";
 }
 
 - (IBAction)showPinAction:(UIButton *)sender {
-    if([self codeForPinViewController].length > 0){
-        PinViewController *vc;
-        PinStyle *style = [PinStyle defaultStyle];
-        style.titleText = @"Enter PIN";
-        [PinViewController setNewStyle:style];
-        vc = [[PinViewController alloc] initWithScope:PinViewControllerScopeValidate];
-        vc.dataSourceDelegate = self;
-        vc.validateDelegate = self;
-        [self presentViewController:vc animated:YES completion:nil];
-    }
+    //Config de Appearance
+    PinAppearance * appearance = [[PinAppearance alloc] init];
+    appearance.logo = [UIImage imageNamed:@"sc_logo"];
+    [FingerPrint sharedInstance].appearance = appearance;
+//    [[FingerPrint sharedInstance] setLengthForPin:8];
+    UIViewController *vc = [[FingerPrint sharedInstance] createPinViewWithScope:PinViewControllerScopeValidate WithvalidationDelegate:self];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (IBAction)SettingPinAction:(UIButton *)sender {
-    SettingController *vc;
-    vc = [[SettingController alloc] initWithSettingsStyle:nil];
-    vc.delegate = self;
+    //Config de Appearance
+//    SettingsAppearance *appearance = [[SettingsAppearance alloc] init];
+//    appearance.titleGroupText = @"Group title";
+    PinAppearance * appearance = [[PinAppearance alloc] init];
+    appearance.logo = [UIImage imageNamed:@"sc_logo"];
+    UIViewController *vc = [[FingerPrint sharedInstance] createSettingViewWithAppearance:nil withPinViewControllerAppearance:appearance];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+
 
 @end
