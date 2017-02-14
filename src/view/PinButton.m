@@ -31,11 +31,7 @@
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     [super drawRect:rect];
-    /*
-     @property (nonatomic, strong) UIColor *strokeColor;
-     @property (nonatomic, assign) CGFloat strokeWidth;
-     
-     */
+
     CGFloat height = CGRectGetHeight(rect);
     CGRect  inset  = CGRectInset(CGRectMake(0, 0, height, height), 1, 1);
     

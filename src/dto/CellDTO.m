@@ -14,18 +14,18 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _style = nil;
+        _appearance = nil;
         _switchHidden = YES;
         _enableCell = YES;
     }
     return self;
 }
 
-- (instancetype)initWithId:(pinViewAction)identifier wihtStyle:(SettingsAppearance*)style withDelegate:(id<CellDTODelegate>)delegate {
+- (instancetype)initWithId:(pinViewAction)identifier wihtAppearance:(SettingsAppearance*)appearance withDelegate:(id<CellDTODelegate>)delegate {
     self = [super init];
     if (self) {
         _cellDTOIdentifier = identifier;
-        _style = style;
+        _appearance = appearance;
         _delegate = delegate;
         _enableCell = YES;
         if(delegate){

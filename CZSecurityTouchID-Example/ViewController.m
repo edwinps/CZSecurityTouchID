@@ -7,9 +7,6 @@
 //
 
 #import "ViewController.h"
-//#import "PinViewController.h"
-//#import "PinAppearance.h"
-//#import "SettingController.h"
 #import "FingerPrint.h"
 
 
