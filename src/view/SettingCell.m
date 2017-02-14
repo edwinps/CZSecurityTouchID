@@ -52,21 +52,21 @@
         self.contentView.alpha = 1;
     }
     if(cellDTO.cellDTOIdentifier == activatePin){
-        _titleText.text = cellDTO.style.activateButtonText;
-        _titleText.font = cellDTO.style.activateButtonFont;
-        _titleText.textColor = cellDTO.style.activateButtonColor;
+        _titleText.text = cellDTO.appearance.activateButtonText;
+        _titleText.font = cellDTO.appearance.activateButtonFont;
+        _titleText.textColor = cellDTO.appearance.activateButtonColor;
     }else if(cellDTO.cellDTOIdentifier == deactivatePin){
-        _titleText.text = cellDTO.style.deactivateButtonText;
-        _titleText.font = cellDTO.style.deactivateButtonFont;
-        _titleText.textColor = cellDTO.style.deactivateButtonColor;
+        _titleText.text = cellDTO.appearance.deactivateButtonText;
+        _titleText.font = cellDTO.appearance.deactivateButtonFont;
+        _titleText.textColor = cellDTO.appearance.deactivateButtonColor;
     }else  if(cellDTO.cellDTOIdentifier == changePin){
-        _titleText.text = cellDTO.style.changeButtonText;
-        _titleText.font = cellDTO.style.changeButtonFont;
-        _titleText.textColor = cellDTO.style.changeButtonColor;
+        _titleText.text = cellDTO.appearance.changeButtonText;
+        _titleText.font = cellDTO.appearance.changeButtonFont;
+        _titleText.textColor = cellDTO.appearance.changeButtonColor;
     }else  if(cellDTO.cellDTOIdentifier == touchIdPin){
-        _titleText.text = cellDTO.style.touchIDButtonText;
-        _titleText.font = cellDTO.style.touchIDButtonFont;
-        _titleText.textColor = cellDTO.style.touchIDButtonColor;
+        _titleText.text = cellDTO.appearance.touchIDButtonText;
+        _titleText.font = cellDTO.appearance.touchIDButtonFont;
+        _titleText.textColor = cellDTO.appearance.touchIDButtonColor;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 }

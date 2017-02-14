@@ -367,7 +367,7 @@ static PinAppearance *appearance;
 - (void)removeLastPincode {
     NSUInteger index = ([self.currentPin length] - 1);
     if ([self.currentPin length] > index) {
-        self.self.currentPin = [self.currentPin substringToIndex:index];
+        self.currentPin = [self.currentPin substringToIndex:index];
     }
     [self createPinView];
 }
@@ -509,7 +509,7 @@ static PinAppearance *appearance;
     
     NSError   * error   = nil;
     LAContext * context = [[LAContext alloc] init];
-    
+    context.localizedFallbackTitle = @"";
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         __weak PinViewController *weakSelf = self;
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics

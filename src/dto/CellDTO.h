@@ -12,13 +12,13 @@
 @class SettingsAppearance;
 
 @interface CellDTO : NSObject
-@property (strong,nonatomic) SettingsAppearance* style;
+@property (strong,nonatomic) SettingsAppearance* appearance;
 @property (nonatomic) BOOL enableCell;
 @property (nonatomic) BOOL switchHidden;
 @property (nonatomic) pinViewAction cellDTOIdentifier;
 @property (nonatomic,weak) id<CellDTODelegate> delegate;
 @property (nonatomic) BOOL switchOn;
 
-- (instancetype)initWithId:(pinViewAction)identifier wihtStyle:(SettingsAppearance*)style withDelegate:(id<CellDTODelegate>)delegate;
+- (instancetype)initWithId:(pinViewAction)identifier wihtAppearance:(SettingsAppearance*)appearance withDelegate:(id<CellDTODelegate>)delegate;
 
 @end

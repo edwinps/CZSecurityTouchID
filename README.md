@@ -20,7 +20,7 @@ Usage
 
 ### 1. import the class
 ```obj-c
-#import <FingerPrint.h>
+#import <T21FingerPrint.h>
 ```
 
 ### Create a simple validation view

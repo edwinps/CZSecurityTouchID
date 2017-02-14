@@ -89,22 +89,22 @@ NSString * const kCellIdentifier = @"SettingCell";
     LAContext * context = [[LAContext alloc] init];
     NSMutableArray *arrayButtons = [[NSMutableArray alloc] init];
     
-    CellDTO * changeCodeButton = [[CellDTO alloc] initWithId:changePin wihtStyle:_appearance withDelegate:nil];
-    CellDTO * tocheIDButton = [[CellDTO alloc] initWithId:touchIdPin wihtStyle:_appearance withDelegate:self];
+    CellDTO * changeCodeButton = [[CellDTO alloc] initWithId:changePin wihtAppearance:_appearance withDelegate:nil];
+    CellDTO * tochIDButton = [[CellDTO alloc] initWithId:touchIdPin wihtAppearance:_appearance withDelegate:self];
     if ([self.delegate codeForPinViewController].length > 0){
-        CellDTO *deactiveButton = [[CellDTO alloc] initWithId:deactivatePin wihtStyle:_appearance withDelegate:nil];
+        CellDTO *deactiveButton = [[CellDTO alloc] initWithId:deactivatePin wihtAppearance:_appearance withDelegate:nil];
         [arrayButtons addObject:deactiveButton];
     }else{
-        CellDTO * activeButton = [[CellDTO alloc] initWithId:activatePin wihtStyle:_appearance withDelegate:nil];
+        CellDTO * activeButton = [[CellDTO alloc] initWithId:activatePin wihtAppearance:_appearance withDelegate:nil];
         [arrayButtons addObject:activeButton];
         changeCodeButton.enableCell = NO;
-        tocheIDButton.enableCell = NO;
+        tochIDButton.enableCell = NO;
     }
     [arrayButtons addObject:changeCodeButton];
     
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
-        [arrayButtons addObject:tocheIDButton];
-        tocheIDButton.switchOn = [_delegate touchIDActiveViewController];
+        [arrayButtons addObject:tochIDButton];
+        tochIDButton.switchOn = [_delegate touchIDActiveViewController];
         _footerGroupText = _appearance.footerGroupText;
 
     }
@@ -242,7 +242,7 @@ NSString * const kCellIdentifier = @"SettingCell";
 }
 
 -(void)touchIDActive:(UIViewController *)viewController didActiveTouchID:(BOOL)active{
-    [_delegate touchIDActive:viewController didActiveTouchID:activatePin];
+    [_delegate touchIDActive:viewController didActiveTouchID:active];
 }
 
 -(NSInteger)lengthForPin{
